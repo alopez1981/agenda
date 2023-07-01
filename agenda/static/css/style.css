@@ -16,6 +16,20 @@
     color: var(--color-text);
 }
 
+@font-face {
+    font-family: Roboto-bold;
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: Roboto-regular;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+}
+
 /* Layout */
 nav {
     display: flex;
@@ -39,27 +53,108 @@ nav ul li a {
     color: white;
     text-transform: uppercase;
     font-family: var(--font-main);
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: var(--color-text);
 }
 
 main {
     display: flex;
+    flex-direction: column;
     width: 100vw;
     margin: 50px;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
 }
 
-@font-face {
-    font-family: Roboto-bold;
-    src: url('../fonts/Roboto-Bold.ttf');
+.list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-text);
+    width: 50%;
+    list-style-type: none;
 }
 
-@font-face {
-    font-family: Roboto-regular;
-    src: url('../fonts/Roboto-Regular.ttf');
+.list li {
+    padding: 15px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-main);
+.btn {
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.btn-detail {
+    background-color: var(--color-primary);
+    color: white;
 }
 
+.btn-detail:hover {
+    background-color: white;
+    color: var(--);
+}
+
+.btn-edit {
+    background-color: #ffce00;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: white;
+    color: #ffce00;
+}
+
+.btn-delete {
+    background: #ee1240;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: white;
+    color: #ee1240;
+}
+
+.search {
+    margin: 20px;
+    width: 50%;
+}
+
+.search-bar {
+    padding: 5px;
+    width: 80%;
+}
+
+.btn-search {
+    width: 19%;
+    background-color: var(--color-primary);
+    color: white;
+    outline: none;
+    border: 0;
+    box-shadow: 0;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: white;
+    color: var(--color-primary);
+}
+
+.aux-btns {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.aux-btns a {
+    padding-right: 10px;
+    text-decoration: none;
+}
